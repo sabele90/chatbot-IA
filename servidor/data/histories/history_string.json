@@ -1,0 +1,14 @@
+[
+    {
+        "prompt": "string",
+        "response": "¡Hola! ¿En qué puedo ayudarte con el término \"string\"? ¿Neces",
+        "max_length": 20,
+        "temperature": "baja"
+    },
+    {
+        "prompt": "string",
+        "response": "¡Hola! ¿En qué puedo ayudarte con respecto a la cadena de texto?",
+        "max_length": 20,
+        "temperature": "baja"
+    }
+]

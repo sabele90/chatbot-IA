@@ -1,0 +1,140 @@
+[
+    {
+        "prompt": "hola",
+        "response": "¡Hola! ¿En qué puedo ayudarte hoy?",
+        "max_length": 300,
+        "temperature": "media"
+    },
+    {
+        "prompt": "hola",
+        "response": "¡Hola de nuevo! ¿Cómo puedo ayudarte esta vez?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "hola",
+        "response": "Hola de nuevo. ¿En qué puedo ayudarte hoy?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "la",
+        "response": "¿Hay algo específico en lo que necesites ayuda o información? Estoy aquí para ayudarte en lo que necesites.",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "la",
+        "response": "Si tienes alguna pregunta específica o necesitas ayuda con algo en particular, no dudes en decírmelo. Estoy aquí para asistirte.",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "hola",
+        "response": "¡Hola! ¿En qué puedo ayudarte hoy?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "hola",
+        "response": "¡Hola de nuevo! ¿Cómo puedo ayudarte esta vez?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "hola",
+        "response": "Hola de nuevo. ¿En qué puedo ayudarte hoy?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "hola",
+        "response": "¡Hola de nuevo! ¿En qué puedo ayudarte esta vez?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "hola",
+        "response": "¡Hola! ¿En qué puedo ayudarte hoy?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "a",
+        "response": "¿Hay algo específico en lo que necesites ayuda o información? Estoy aquí para asistirte en lo que necesites.",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "ssks",
+        "response": "Si tienes alguna pregunta específica o necesitas ayuda con algo en particular, ¡estaré encantado de ayudarte en lo que necesites! ¡Estoy aquí para asistirte!",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "a",
+        "response": "Si necesitas ayuda con algo o tienes alguna pregunta, ¡no dudes en decírmelo! Estoy aquí para asistirte en lo que necesites.",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "la",
+        "response": "¿Hay algo específico en lo que necesites ayuda o información? Estoy aquí para asistirte en lo que necesites. ¡No dudes en decirme cómo puedo ayudarte!",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "a",
+        "response": "¿En qué puedo ayudarte hoy? ¡Estoy aquí para asistirte en lo que necesites!",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "la",
+        "response": "Si tienes alguna pregunta específica o necesitas ayuda con algo en particular, no dudes en decírmelo. ¡Estoy aquí para ayudarte en lo que necesites!",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "hola",
+        "response": "¡Hola! ¿En qué puedo ayudarte hoy?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "hpla",
+        "response": "Hola, ¿cómo estás? ¿En qué puedo ayudarte hoy?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "hola",
+        "response": "¡Hola! ¿En qué puedo ayudarte hoy?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "ala",
+        "response": "¿Hay algo en lo que pueda ayudarte? ¡Estoy aquí para asistirte en lo que necesites!",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "hola",
+        "response": "¡Hola de nuevo! ¿En qué puedo ayudarte hoy?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "hola",
+        "response": "¡Hola de nuevo! ¿Cómo puedo ayudarte esta vez?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "hola",
+        "response": "Hola de nuevo. ¿En qué puedo ayudarte hoy?",
+        "max_length": 600,
+        "temperature": "alta"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "prompt": "hola",
+        "response": "¡Hola! ¿En qué puedo ayudarte hoy?",
+        "max_length": 300,
+        "temperature": "media"
+    },
+    {
+        "prompt": "hello",
+        "response": "Hello! How can I assist you today?",
+        "max_length": 300,
+        "temperature": "media"
+    },
+    {
+        "prompt": "hazme una funcion de java script compleja",
+        "response": "¡Claro! Aquí tienes un ejemplo de una función en JavaScript que realiza una operación matemática compleja:\n\n```javascript\nfunction operacionCompleja(a, b) {\n  let resultado = Math.pow((a + 2 * b), 3) / (a * b);\n  return resultado;\n}\n\nlet num1 = 5;\nlet num2 = 3;\nlet resultadoOperacion = operacionCompleja(num1, num2);\nconsole.log(resultadoOperacion);\n```\n\nEn este ejemplo, la función `operacionCompleja` toma dos parámetros `a` y `b`, realiza la operación matemática `(a + 2 * b)^3 / (a * b)` y devuelve el resultado. Luego se llama a la función con los valores `5` y `3`, y se imprime el resultado en la consola.\n\n¡Espero que te haya sido útil este ejemplo de función en JavaScript! ¿Hay algo más en lo que pueda ayudarte?",
+        "max_length": 300,
+        "temperature": "media"
+    },
+    {
+        "prompt": "hola",
+        "response": "¡Hola de nuevo! ¿Hay algo en lo que pueda ayudarte hoy?",
+        "max_length": 300,
+        "temperature": "media"
+    },
+    {
+        "prompt": "hola",
+        "response": "¡Hola! ¿En qué puedo ayudarte hoy?",
+        "max_length": 300,
+        "temperature": "media"
+    }
+]
