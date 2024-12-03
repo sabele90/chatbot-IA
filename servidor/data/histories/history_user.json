@@ -1,0 +1,44 @@
+[
+    {
+        "prompt": "hola me llamo sara",
+        "response": "¡Hola Sara! ¿En qué puedo ayudarte hoy?",
+        "max_length": 600,
+        "temperature": "media"
+    },
+    {
+        "prompt": "como me llamaba",
+        "response": "Te llamas Sara. ¿Hay algo más en lo que pueda ayudarte?",
+        "max_length": 600,
+        "temperature": "media"
+    },
+    {
+        "prompt": "dame una funcion de javascript",
+        "response": "Claro, aquí tienes una función simple en JavaScript que suma dos números:\n\n```javascript\nfunction sumarNumeros(a, b) {\n  return a + b;\n}\n\n// Ejemplo de uso\nvar resultado = sumarNumeros(5, 3);\nconsole.log(resultado); // Output: 8\n```\n\n¿Hay algo más en lo que pueda ayudarte con JavaScript o cualquier otra cosa?",
+        "max_length": 600,
+        "temperature": "media"
+    },
+    {
+        "prompt": "hola",
+        "response": "¡Hola de nuevo! ¿En qué puedo ayudarte hoy?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "ddv",
+        "response": "¿Hay algo más en lo que pueda ayudarte?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "hols",
+        "response": "¡Hola! ¿En qué puedo ayudarte hoy?",
+        "max_length": 600,
+        "temperature": "alta"
+    },
+    {
+        "prompt": "hola",
+        "response": "¡Hola! ¿Cómo estás? ¿Hay algo en lo que pueda ayudarte hoy?",
+        "max_length": 600,
+        "temperature": "alta"
+    }
+]

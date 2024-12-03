@@ -1,27 +1,32 @@
 <template>
   <!-- Input y botón para enviar mensajes -->
-  <div class="chat-input-container flex gap-4 items-center p-5">
-    <div class="input-message">
-      <input v-model="message" type="text" placeholder="Escribe tu mensaje..."
-        class="px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+  <div class="chat-input-container flex gap-4  p-4 bg-transparent">
+
+    <div class="input-message flex-1 flex flex-row items-center space-x-2  rounded-xl">
+      <!-- Input que ocupa todo el espacio -->
+      <input v-model="message" type="text" placeholder="Message Chatbot..."
+        class="flex-grow px-4 py-2 border border-gray-300 rounded-full shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
         @keyup.enter="sendMessage" />
+
+      <!-- Botón con tamaño fijo -->
       <button @click="sendMessage"
-        class="px-6 py-2 bg-indigo-600 text-white font-medium rounded-md shadow hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
+        class="w-12 h-12 flex items-center justify-center bg-indigo-600 text-white font-medium rounded-full shadow hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
         <PaperAirplaneIcon class="w-6 h-6 text-white" />
       </button>
     </div>
 
+
     <!-- Opciones: Creatividad y Longitud -->
-    <div class="options flex justify-end space-x-4 bg-yellow-300">
+    <div class="options flex justify-end space-x-4">
       <!-- Botón de creatividad -->
       <div class="creativeButton relative flex flex-col items-center ">
         <button @click="toggleCreativityMenu" :class="[
           'w-12 h-12 flex items-center justify-center rounded-full shadow-md transition-all relative',
           selectedCreativity ? 'bg-blue-500' : 'bg-gray-300',
           'hover:bg-blue-600 focus:outline-none',
-        ]" @mouseover="showTooltip = true" @mouseleave="showTooltip = false">
+        ]" @mouseover="showTooltipCreativity = true" @mouseleave="showTooltipCreativity = false">
           <PaintBrushIcon class="w-6 h-6 text-white" />
-          <div v-if="showTooltip && !showCreativityMenu"
+          <div v-if="showTooltipCreativity && !showCreativityMenu"
             class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded-md shadow-md">
             Creatividad
           </div>
@@ -46,20 +51,40 @@
 
 
       <!-- Botón de longitud -->
-      <div class="longitudeButton">
-        <button @click="toggleLengthMenu"
-          class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-md shadow hover:bg-indigo-700 focus:outline-none">
-          {{ selectedLength || "Longitud" }}
+
+
+      <div class="longitudeButton relative flex flex-col items-center ">
+        <button @click="toggleLengthMenu" :class="[
+          'w-12 h-12 flex items-center justify-center rounded-full shadow-md transition-all relative',
+          selectedLength ? 'bg-blue-500' : 'bg-gray-300',
+          'hover:bg-blue-600 focus:outline-none',
+        ]" @mouseover="showTooltipLongitude = true" @mouseleave="showTooltipLongitude = false">
+          <ChatBubbleLeftEllipsisIcon class="w-6 h-6 text-white" />
+          <div v-if="showTooltipLongitude && !showLengthMenu"
+            class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded-md shadow-md">
+            Longitud
+          </div>
         </button>
-        <div v-if="showLengthMenu" class="absolute mt-2 w-30 bg-white border border-gray-300 rounded-md shadow-lg">
+
+        <div v-show="showLengthMenu"
+          class="absolute bottom-14 w-40 bg-white border border-gray-300 rounded-lg shadow-md p-2 z-50 transition-transform origin-bottom scale-y-0"
+          :class="{ 'scale-y-100': showLengthMenu }">
           <ul>
-            <li v-for="length in maxLengths" :key="length" @click="selectLength(length)"
-              class="px-4 py-2 hover:bg-indigo-100 cursor-pointer">
+            <li v-for="length in maxLengths" :key="length" @click="selectLength(length)" :class="[
+              'px-4 py-2 rounded-md cursor-pointer transition-colors',
+              length === selectedLength
+                ? 'bg-blue-500 text-white'
+                : 'hover:bg-gray-100',
+            ]">
               {{ length }}
             </li>
           </ul>
         </div>
       </div>
+
+
+
+
     </div>
 
   </div>
@@ -77,7 +102,8 @@ export default defineComponent({
 
     // Variables reactivas
     const message = ref("");
-    const showTooltip = ref(false);
+    const showTooltipCreativity = ref(false);
+    const showTooltipLongitude = ref(false);
     const selectedCreativity = ref<"baja" | "media" | "alta" | null>(null);
     const selectedLength = ref<number | null>(null);
     const showCreativityMenu = ref(false);
@@ -130,7 +156,7 @@ export default defineComponent({
 
       // Crear el payload y enviar el mensaje
       await chatStore.sendMessage({
-        user_id: "user124",
+        user_id: "user",
         prompt: message.value.trim(),
         max_length: selectedLength.value,
         temperature: selectedCreativity.value,
@@ -141,7 +167,8 @@ export default defineComponent({
     };
 
     return {
-      showTooltip,
+      showTooltipCreativity,
+      showTooltipLongitude,
       message,
       selectedCreativity,
       selectedLength,

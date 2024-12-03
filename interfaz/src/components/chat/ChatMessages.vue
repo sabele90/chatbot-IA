@@ -1,29 +1,28 @@
 <script lang="ts">
 import { defineComponent, computed } from "vue";
 import { useChatStore } from "../../stores/chatStore";
+import { useSidebarStore } from '../../stores/sidebarStore';
 
 
 export default defineComponent({
   name: "ChatMessages",
   setup() {
     const chatStore = useChatStore();
-
+    const sidebarStore = useSidebarStore();
     // Computar los mensajes desde la tienda
     const messages = computed(() => chatStore.messages);
 
-    return { messages };
+    return { messages, sidebarStore };
   },
 });
 </script>
 
 <template>
   <div class="chat-messages">
-    <div
-      v-for="message in messages"
-      :key="message.id"
-      :class="['message', message.role]"
-      v-html="$markdownToHtml(message.content)" 
-    ></div>
+    <!-- Botón para alternar el sidebar -->
+    <BookOpenIcon class="w-8 h-8 text-black cursor-pointer" @click="sidebarStore.toggleSidebar" />
+    <div v-for="message in messages" :key="message.id" :class="['message', message.role]"
+      v-html="$markdownToHtml(message.content)"></div>
   </div>
 </template>
 
@@ -47,7 +46,7 @@ export default defineComponent({
 
 .message.user {
   align-self: flex-end;
-  background-color: #007bff;
+  background-color: #9eadbc;
   color: white;
 }
 
@@ -64,7 +63,8 @@ export default defineComponent({
   margin-top: 10px;
 }
 
-.chat-messages th, .chat-messages td {
+.chat-messages th,
+.chat-messages td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;

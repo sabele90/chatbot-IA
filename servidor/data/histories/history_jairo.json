@@ -1,8 +1,0 @@
-[
-    {
-        "prompt": "como esta el tiempo en las palmas",
-        "response": "Lo siento, pero no tengo la capacidad de proporcionar información en tiempo real sobre el clima en Las Palmas. Te recomendaría verificarlo en una aplicación meteorológica confiable o en un sitio web especializado en pronósticos del tiempo. ¡Espero que tengas un buen día!",
-        "max_length": 500,
-        "temperature": "alta"
-    }
-]
